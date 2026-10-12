@@ -1,0 +1,13 @@
+---
+Name: silvershop-newsletter-mailchimp
+After:
+  - '#silvershop-newsletter'
+---
+# Register the Mailchimp provider. To use it, set SS_MAILCHIMP_API_KEY + SS_MAILCHIMP_LIST_ID
+# and switch the active provider to `mailchimp`:
+#
+#   SilverShop\Newsletter\Provider\NewsletterProviderRegistry:
+#     active: mailchimp
+SilverShop\Newsletter\Provider\NewsletterProviderRegistry:
+  providers:
+    mailchimp: '%$SilverShop\Newsletter\Mailchimp\MailchimpProvider'

@@ -1,0 +1,3 @@
+fr:
+  SilverShop\Newsletter\Mailchimp\MailchimpProvider:
+    NAME: 'Mailchimp'
