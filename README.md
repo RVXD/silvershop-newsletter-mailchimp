@@ -135,3 +135,7 @@ composer run test    # phpunit — uses a FakeMailchimpClient, no live HTTP
 ## License
 
 BSD-3-Clause.
+
+## Credits
+
+Built and maintained by **Remy Vaartjes** (<remy@xd.nl>) — part of the **SilverShop-Suite**.
