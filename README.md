@@ -1,7 +1,7 @@
-# silvershop/newsletter-mailchimp
+# silvershop-suite/newsletter-mailchimp
 
 [Mailchimp](https://mailchimp.com/) ESP adapter for
-[`silvershop/newsletter`](https://github.com/RVXD/silvershop-newsletter). It implements the core's
+[`silvershop-suite/newsletter`](https://github.com/RVXD/silvershop-newsletter). It implements the core's
 `NewsletterProvider` contract with a **thin Guzzle client** (no heavy official SDK) and maps subscriber changes to
 the Mailchimp Marketing API v3, plus a webhook back to the local list.
 
@@ -10,16 +10,16 @@ audience and keeps the local status in step via webhooks.
 
 ## Requirements
 
-- `silvershop/newsletter` `dev-main` (the core — not on Packagist, see **Installation**)
+- `silvershop-suite/newsletter` `dev-main` (the core — not on Packagist, see **Installation**)
 - `guzzlehttp/guzzle` ^7
 - `silverstripe/framework` ^6, `silverstripe/cms` ^6, PHP 8.3 / 8.4
 
-`silvershop/newsletter` hard-requires `symbiote/silverstripe-queuedjobs`, so the queued sync runner comes in
+`silvershop-suite/newsletter` hard-requires `symbiote/silverstripe-queuedjobs`, so the queued sync runner comes in
 transitively.
 
 ## Installation
 
-`silvershop/newsletter` is an RVXD module (not published to Packagist), so it is resolved from a composer
+`silvershop-suite/newsletter` is an RVXD module (not published to Packagist), so it is resolved from a composer
 `repositories` entry. The shipped `composer.json` uses the **VCS** form:
 
 ```json
@@ -31,14 +31,14 @@ transitively.
 Then:
 
 ```bash
-composer require silvershop/newsletter-mailchimp:dev-main
+composer require silvershop-suite/newsletter-mailchimp:dev-main
 ```
 
 (A private newsletter repo needs a GitHub token with `repo` scope, e.g. `composer config -g github-oauth.github.com <token>`.)
 
 ### Local development (core not yet pushed)
 
-When you are developing both modules side by side and `silvershop/newsletter` isn't published yet, point the
+When you are developing both modules side by side and `silvershop-suite/newsletter` isn't published yet, point the
 adapter at your local checkout with a **path** repository instead of (or in addition to) the VCS entry — this is
 how the dev site and the standalone clean-room resolve it:
 
